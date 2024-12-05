@@ -1,0 +1,10 @@
+/Users/luketurnbull/dev/wasm-test/hello-wasm/target/wasm32-unknown-unknown/release/deps/libweb_sys-e7504399dac89325.rmeta: /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/lib.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/mod.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_EventTarget.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_Window.rs
+
+/Users/luketurnbull/dev/wasm-test/hello-wasm/target/wasm32-unknown-unknown/release/deps/libweb_sys-e7504399dac89325.rlib: /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/lib.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/mod.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_EventTarget.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_Window.rs
+
+/Users/luketurnbull/dev/wasm-test/hello-wasm/target/wasm32-unknown-unknown/release/deps/web_sys-e7504399dac89325.d: /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/lib.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/mod.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_EventTarget.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_Window.rs
+
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/lib.rs:
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/mod.rs:
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_EventTarget.rs:
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/web-sys-0.3.74/src/features/gen_Window.rs:

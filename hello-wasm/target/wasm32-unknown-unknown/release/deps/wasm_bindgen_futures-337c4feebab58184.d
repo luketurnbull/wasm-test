@@ -1,0 +1,9 @@
+/Users/luketurnbull/dev/wasm-test/hello-wasm/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen_futures-337c4feebab58184.rmeta: /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/lib.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/queue.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/task/singlethread.rs
+
+/Users/luketurnbull/dev/wasm-test/hello-wasm/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen_futures-337c4feebab58184.rlib: /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/lib.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/queue.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/task/singlethread.rs
+
+/Users/luketurnbull/dev/wasm-test/hello-wasm/target/wasm32-unknown-unknown/release/deps/wasm_bindgen_futures-337c4feebab58184.d: /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/lib.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/queue.rs /Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/task/singlethread.rs
+
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/lib.rs:
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/queue.rs:
+/Users/luketurnbull/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wasm-bindgen-futures-0.4.47/src/task/singlethread.rs:

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hello-wasm example</title>
+    <style>
+      .counter {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="startWasm">Start WASM Process</button>
+    <button id="increment">Increment Counter</button>
+    <div class="counter">Counter: <span id="count">0</span></div>
+    <div id="status">Status: Idle</div>
+
+    <script type="module">
+      import init, { delayed_process } from "./hello-wasm/pkg/hello_wasm.js";
+
+      // Initialize counter
+      let count = 0;
+      const countElement = document.getElementById("count");
+      const statusElement = document.getElementById("status");
+
+      // Increment button handler
+      document.getElementById("increment").addEventListener("click", () => {
+        count++;
+        countElement.textContent = count;
+      });
+
+      // WASM process button handler
+      document
+        .getElementById("startWasm")
+        .addEventListener("click", async () => {
+          statusElement.textContent = "Status: Processing...";
+
+          try {
+            const input = new TextEncoder().encode("Hello, World!");
+            const result = await delayed_process(input);
+            console.log("WASM result:", result);
+          } catch (error) {
+            console.error("WASM error:", error);
+          }
+
+          statusElement.textContent = "Status: Completed";
+        });
+
+      // Initialize WASM
+      await init();
+      console.log("WASM initialized");
+    </script>
+  </body>
+</html>

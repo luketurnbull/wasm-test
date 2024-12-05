@@ -14,29 +14,87 @@
         font-size: 16px;
         margin: 10px;
       }
+      .file-section {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      #jsonOutput {
+        margin-top: 20px;
+        white-space: pre-wrap;
+        font-family: monospace;
+        background: #f5f5f5;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
-    <button id="startWasm">Start WASM Process</button>
-    <button id="increment">Increment Counter</button>
-    <div class="counter">Counter: <span id="count">0</span></div>
-    <div id="status">Status: Idle</div>
+    <div class="file-section">
+      <h3>CSV to JSON Converter</h3>
+      <input type="file" id="csvFile" accept=".csv" />
+      <button id="convertBtn">Convert to JSON</button>
+      <div id="jsonOutput"></div>
+    </div>
+
+    <div class="counter-section">
+      <button id="startWasm">Start WASM Process</button>
+      <button id="increment">Increment Counter</button>
+      <div class="counter">Counter: <span id="count">0</span></div>
+      <div id="status">Status: Idle</div>
+    </div>
 
     <script type="module">
-      import init, { delayed_process } from "./hello-wasm/pkg/hello_wasm.js";
+      import init, {
+        delayed_process,
+        csv_to_json,
+      } from "./hello-wasm/pkg/hello_wasm.js";
 
       // Initialize counter
       let count = 0;
       const countElement = document.getElementById("count");
       const statusElement = document.getElementById("status");
+      const jsonOutput = document.getElementById("jsonOutput");
 
-      // Increment button handler
+      // CSV conversion handler
+      document
+        .getElementById("convertBtn")
+        .addEventListener("click", async () => {
+          const fileInput = document.getElementById("csvFile");
+          const file = fileInput.files[0];
+
+          if (!file) {
+            alert("Please select a CSV file first!");
+            return;
+          }
+
+          try {
+            statusElement.textContent = "Status: Converting CSV...";
+
+            // Read file as array buffer
+            const arrayBuffer = await file.arrayBuffer();
+            const uint8Array = new Uint8Array(arrayBuffer);
+
+            // Convert to JSON using WASM
+            const jsonResult = await csv_to_json(uint8Array);
+
+            // Pretty print the JSON
+            const prettyJson = JSON.stringify(JSON.parse(jsonResult), null, 2);
+            jsonOutput.textContent = prettyJson;
+
+            statusElement.textContent = "Status: Conversion Complete";
+          } catch (error) {
+            console.error("Conversion error:", error);
+            statusElement.textContent = "Status: Conversion Failed";
+            jsonOutput.textContent = `Error: ${error.message}`;
+          }
+        });
+
+      // Keep existing event listeners
       document.getElementById("increment").addEventListener("click", () => {
         count++;
         countElement.textContent = count;
       });
 
-      // WASM process button handler
       document
         .getElementById("startWasm")
         .addEventListener("click", async () => {
